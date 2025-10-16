@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -13,14 +14,40 @@ public float changeInterval = 3f;
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= changeInterval){
-            moveSpeedx = Random.Range(-2f, 2f);
-            moveSpeedy = Random.Range(-2f, 2f);
+        if (timer >= changeInterval)
+        {
+            moveSpeedx = Random.Range(-4f, 4f);
+            moveSpeedy = Random.Range(-4f, 4f);
             timer = 0f;
         }
         Vector3 pos = transform.position;
+         
+        if (pos.x< -10 && moveSpeedx < 0)
+        {
+            moveSpeedx=moveSpeedx*-1;
+        }
+        if( pos.x>10&& moveSpeedx> 0){
+            moveSpeedx=moveSpeedx*-1;
+        }
+        if (pos.y< -4 && moveSpeedy < 0)
+        {
+            moveSpeedy=moveSpeedx*-1;
+        }
+        if (pos.y > 4 && moveSpeedy > 0)
+        {
+            moveSpeedy = moveSpeedx * -1;
+        }
+        if (moveSpeedx > 0)
+        {
+            //TODO SET X TO DEFAULT
+        }
+          if (moveSpeedx < 0)
+        {
+            //TODO FLIP X 
+        }
         pos.x += moveSpeedx * Time.deltaTime;
         pos.y += moveSpeedy * Time.deltaTime; 
         transform.position = pos;
+
     }
 }
