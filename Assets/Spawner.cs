@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public Vector2 spawnAreaMax = new Vector2(5f, 5f);
     float timer = 0f;     
 
-    public float changeInterval = 3f;
+    public float changeInterval;
 
     void Start()
     {

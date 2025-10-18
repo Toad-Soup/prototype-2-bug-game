@@ -205,8 +205,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.59, y: 0.08, z: 0}
-  m_LocalScale: {x: 0.56445986, y: 0.50277936, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.38, y: 0.3384761, z: 0.67320997}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
   bugPrefab: {fileID: 1605655982897089911, guid: 7b04e3882dafd494f81ec064822a995d, type: 3}
   spawnAreaMin: {x: -5, y: -5}
   spawnAreaMax: {x: 5, y: 5}
-  changeInterval: 3
+  changeInterval: 20
 --- !u!4 &810910453
 Transform:
   m_ObjectHideFlags: 0
