@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1a41f11281e502442a75c8da744dcb62
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BLOOD: {fileID: 6090561922062188861, guid: 6d5601ffb3d744c459536e5d43a5e247, type: 3}
+  - squishSound: {fileID: 8300000, guid: a826d471772e193479a8b9d1524fb63d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

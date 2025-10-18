@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 
+// get info from the json file
+
 [System.Serializable]
 public class BugDataContainer
 {
@@ -29,6 +31,8 @@ public class BugDataLoader : MonoBehaviour
         BugDataContainer container = JsonUtility.FromJson<BugDataContainer>(jsonFile.text);
         data = container.bugs[0];
     }
+
+    // functions for retrieving random info
 
     public string GetRandomName() => data.names[Random.Range(0, data.names.Count)];
     public string GetRandomNature() => data.natures[Random.Range(0, data.natures.Count)];

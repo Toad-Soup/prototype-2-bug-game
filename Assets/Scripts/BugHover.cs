@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 
+// tooltip that appears when hovering over a bug 
 public class BugHover : MonoBehaviour
 {
     public GameObject tooltipPrefab;
@@ -37,6 +38,9 @@ public class BugHover : MonoBehaviour
             {
                 Destroy(tooltipInstance);
             }
+
+            // currently no handling for when a bug dies so it just persists
+            // that was unintentional but i kind of like the effect
         }
     }
 

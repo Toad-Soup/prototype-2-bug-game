@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8049065882941486843}
   - component: {fileID: 1539650713288767453}
   - component: {fileID: 6553902069671642475}
+  - component: {fileID: -5512213497409579155}
   m_Layer: 0
   m_Name: Bug
   m_TagString: Untagged
@@ -182,3 +183,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.5, y: 7.77}
   m_EdgeRadius: 0
+--- !u!114 &-5512213497409579155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605655982897089911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a41f11281e502442a75c8da744dcb62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BugSquish
+  BLOOD: {fileID: 6090561922062188861, guid: 6d5601ffb3d744c459536e5d43a5e247, type: 3}
+  squishSound: {fileID: 8300000, guid: a826d471772e193479a8b9d1524fb63d, type: 3}

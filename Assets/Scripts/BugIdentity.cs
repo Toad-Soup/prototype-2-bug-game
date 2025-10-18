@@ -2,6 +2,8 @@ using System;
 using System.Linq;
 using UnityEngine;
 
+//store bug identity information
+
 public class BugIdentity : MonoBehaviour
 {
     public string bugName;
@@ -19,7 +21,7 @@ public class BugIdentity : MonoBehaviour
 
     public string GetDescription()
     {
-        // basic for now, could make nicer/separate functions so name can be bolder
+        // basic for now, could make nicer/separate functions for formatting
         return $"{bugName}\n\n" +
                $"Mate: {spouseName}\n"+
                $"Parent to: {string.Join(", ", children)}\n"+
