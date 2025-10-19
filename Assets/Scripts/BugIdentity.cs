@@ -9,14 +9,16 @@ public class BugIdentity : MonoBehaviour
     public string bugName;
     public string spouseName;
     public string[] children;
-    public string nature;
+    [SerializeField] public string nature;
+   
 
     void Start()
     {
         bugName = BugDataLoader.Instance.GetRandomName();
         spouseName = BugDataLoader.Instance.GetSpouse();
         children = BugDataLoader.Instance.GetChildren();
-        nature = BugDataLoader.Instance.GetRandomNature();
+        if (string.IsNullOrEmpty(nature))
+            nature = BugDataLoader.Instance.GetRandomNature();
     }
 
     public string GetDescription()

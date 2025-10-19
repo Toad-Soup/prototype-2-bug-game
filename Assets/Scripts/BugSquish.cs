@@ -52,6 +52,7 @@ public class BugSquish : MonoBehaviour
 
         Instantiate(BLOOD, transform.position, Quaternion.identity, transform.parent);
         audioSource.PlayOneShot(squishSound);
+        Spawner.totalSpawned--;
         Destroy(gameObject);
 
         // unpause
