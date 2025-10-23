@@ -18,6 +18,8 @@ public class BugHover : MonoBehaviour
         canvas = FindFirstObjectByType<Canvas>();
     }
 
+    // no tooltip in this version
+    /*
     void Update()
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
@@ -49,6 +51,7 @@ public class BugHover : MonoBehaviour
             // currently no handling for when a bug dies so it just persists
             // that was unintentional but i kind of like the effect
         }
-    }
+    }*/
+
 
 }

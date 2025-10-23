@@ -28,12 +28,13 @@ public class BugSquish : MonoBehaviour
         {
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
-                StartCoroutine(ConfirmSquish());
+                //StartCoroutine(ConfirmSquish());
+                Squish();
             }
         }
     }
 
-    // multiple confirmations sequence
+    // multiple confirmations sequence for remorse side
     private IEnumerator ConfirmSquish()
     {
         // pause
@@ -69,10 +70,19 @@ public class BugSquish : MonoBehaviour
         yield break;
     }
 
+    // simple squish
+    private void Squish()
+    {
+        Instantiate(BLOOD, transform.position, Quaternion.identity, transform.parent);
+        squishSource.PlayOneShot(squishSound);
+        Spawner.totalSpawned--;
+        Destroy(gameObject);
+    }
+
+
     // unity editor popup for now, can add ui w prefab later if we need to make a real build
     private bool ShowConfirmation(string message)
     {
-        // using unity editor popup for now 
 #if UNITY_EDITOR
         return UnityEditor.EditorUtility.DisplayDialog("Squish Bug?", message, "Yes", "No");
 #else
