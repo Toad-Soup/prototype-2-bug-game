@@ -10,12 +10,12 @@ public class BugSquish : MonoBehaviour
     public AudioClip squishSound;
 
     private BugIdentity identity;
-    private AudioSource audioSource;
+    private AudioSource squishSource;
 
     void Start()
     {
         identity = GetComponent<BugIdentity>();
-        audioSource = gameObject.AddComponent<AudioSource>();
+        squishSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -44,23 +44,32 @@ public class BugSquish : MonoBehaviour
         confirmed = ShowConfirmation("Do you want to squish this bug?");
         if (!confirmed) { Time.timeScale = 1f; yield break; }
 
-        confirmed = ShowConfirmation("Confirm the identity of the bug you wish to squish?\n" + identity.GetDescription());
+        confirmed = ShowConfirmation("Confirm the identity of the bug you wish to squish?\n\n" + identity.GetDescription());
         if (!confirmed) { Time.timeScale = 1f; yield break; }
 
         confirmed = ShowConfirmation("Are you certain you want to end this bug's life? This action cannot be undone.");
         if (!confirmed) { Time.timeScale = 1f; yield break; }
 
+        confirmed = ShowConfirmation("...please don't..");
+        if (!confirmed) { Time.timeScale = 1f; yield break; }
+
         Instantiate(BLOOD, transform.position, Quaternion.identity, transform.parent);
-        audioSource.PlayOneShot(squishSound);
+        squishSource.PlayOneShot(squishSound);
         Spawner.totalSpawned--;
         Destroy(gameObject);
+
+        //permenantly stop music here
+        if (SoundManager.BGM != null)
+        {
+            SoundManager.BGM.Pause();
+        }
 
         // unpause
         Time.timeScale = 1f;
         yield break;
     }
 
-    // unity editor popup for now, can add ui w prefab later
+    // unity editor popup for now, can add ui w prefab later if we need to make a real build
     private bool ShowConfirmation(string message)
     {
         // using unity editor popup for now 

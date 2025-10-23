@@ -8,11 +8,13 @@ public class BugHover : MonoBehaviour
     public GameObject tooltipPrefab;
     private GameObject tooltipInstance;
     private BugIdentity identity;
+    private Movement moveScript;
     private Canvas canvas;
 
     void Start()
     {
         identity = GetComponent<BugIdentity>();
+        moveScript = GetComponent<Movement>();
         canvas = FindFirstObjectByType<Canvas>();
     }
 
@@ -30,13 +32,18 @@ public class BugHover : MonoBehaviour
                 tooltipInstance.GetComponentInChildren<TextMeshProUGUI>().text = identity.GetDescription();
             }
 
-            tooltipInstance.transform.position = mousePos + new Vector2(0, 25f);
+            tooltipInstance.transform.position = mousePos + new Vector2(-35f, 50f);
+            moveScript.hold();
+
+
         }
         else
         {
             if (tooltipInstance != null)
             {
                 Destroy(tooltipInstance);
+                moveScript.release();
+
             }
 
             // currently no handling for when a bug dies so it just persists
