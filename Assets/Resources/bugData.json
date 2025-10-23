@@ -1,0 +1,21 @@
+{
+  "bugs": [
+    {
+      "names": 
+      [
+          "Zippy", "Skye", "Daisy", "Sunny", "Atlas", "Juniper", "River", "Silas", "Poppy", "Jr", "Rosy", "Bobble", 
+          "Periwinkle", "Olive", "Sage", "Mabel", "Clementine", "Iris", "Daphne", "Oliver", "Clover", 
+          "Fern", "Ebony", "Pearl", "Opal", "Timothy", "Heather", "Squishy", "Buck", "Kit", "Chip", "Dewey",
+          "Dill", "Niko", "Page", "Pea", "Scout", "Splash", "Flick", "Dot", "Aphie", "Flora", "Woody", "Buzz", 
+          "Lark", "Gert", "Rue", "Moss", "Thorn", "Glen", "Huck", "Ripley", "Pip", "Puck", "Bubbles", "Basil", 
+          "Pistachio", "Peanut", "Birch", "Chestnut", "Walnut", "Hazel", "Filbert", "Acorn", "Dale", "Myrtle",
+          "Tansy", "Stick"
+      ],
+      "natures":
+      [
+          "energetic", "sporadic", "lazy", "cursed"
+      ]
+    }
+  ]
+}
+
