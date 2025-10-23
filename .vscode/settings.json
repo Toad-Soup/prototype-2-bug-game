@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "prototype-2-bug-game-iteration_tension.sln"
+    "dotnet.defaultSolution": "prototype-2-bug-game.sln"
 }
