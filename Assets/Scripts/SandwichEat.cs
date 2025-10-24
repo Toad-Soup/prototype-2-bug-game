@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SandwichEat : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class SandwichEat : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Sandwich destroyed!");
+                SceneManager.LoadScene("GameOver");
             }
         }
     }
