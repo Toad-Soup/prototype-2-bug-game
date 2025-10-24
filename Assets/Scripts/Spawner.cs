@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public static int totalSpawned = 0;
     float timer = 2f;     
 
-    public float changeInterval;
+    float changeInterval = 3f;
 
     void Start()
     {
